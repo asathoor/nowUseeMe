@@ -5,8 +5,8 @@
 		
 		<!-- SEO stuff -->
 		<meta name="generator" content="Bluefish 2.2.9" >
-		<meta name="author" content="Per Thykjaer Jensen" >
-		<meta name="date" content="2017-12-20T16:30:43+0100" >
+		<meta name="author" content="per Jensen" >
+		<meta name="date" content="2018-01-17T14:27:05+0100" >
 		<meta name="copyright" content="">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
@@ -46,9 +46,62 @@
 			<h2>No man, I don't eat pork</h2>
 			<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
 
+
+
+			<!-- YouTube API -->
+<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
+
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+			'startSeconds': 0,
+         'endSeconds': 25,          
+          videoId: 'I_MKHBJAjqc',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 32000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>	
+	
 			<!-- Since the element should be on screen, the detector is placed in the following element ... -->			
 			<h2>HERE IS SO VISIBLE</h2>
 			<p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
+
+			<h1>API</h1>	
 			
 			<h2 id="here">No, motherfucker</h2>
 			<p>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand? </p>

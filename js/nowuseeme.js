@@ -33,5 +33,13 @@ function isElementVisible(el) {
 
 /* When scrolling do this */			
 window.onscroll = function() {
-	console.log( isElementVisible( a ) ); // false or true: Q.E.D.	
+	console.log( isElementVisible( a ) ); // false or true: Q.E.D.
+	
+	if ( isElementVisible( a ) ) {	
+		a.innerHTML = '<h1>ALOHAMORA!</h1>';
+	}
+	if ( !isElementVisible( a ) ) {	
+		a.innerHTML = '<h1>zzzz</h1>';
+		console.log('not visible');
+	}
 };
