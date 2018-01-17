@@ -18,3 +18,7 @@ So the webdocumentary is a way to tell a story by by means of human interactions
 
 * [Samuel L. Ipsum](http://slipsum.com/)
 * [Tell if a dom element is visible](https://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport/)
+
+## Other Vanilla Solutions
+
+* [Duckduckgo query](https://duckduckgo.com/?q=vanilla+javascript+detect+if+element+is+visible&atb=v71-6__&ia=qa&iax=qa)
