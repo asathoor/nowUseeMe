@@ -5,6 +5,16 @@ For the webdocumenary case, 2nd semester Multimedia Designer, spring 2018.**
 * [Online version](https://asathoor.github.io/nowUseeMe/)
 * See the result in the JavaScript console.
 
+Use the `nowuseeme.js` in order to detect whether a tag in `index.html` is visible or not. The tag is defined in [this line](https://github.com/asathoor/nowUseeMe/blob/master/js/nowuseeme.js#L7).
+
+The video is added via an iframe. If you want it to play when visible make sure to set autoplay to 1, as in this line of the function playVideo(). Note autoplay=1 in the src:
+
+~~~~
+ a.innerHTML = '<iframe id="ytplayer" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&cc_load_policy=<1></1>" frameborder="0"  allowfullscreen>';   
+~~~~
+
+If you want to load your own video file, then use a HTML5 video tag as your innerHTML.
+
 ## What is a webdocumentary?
 From the perspective of the designer og communicator a webdocumentary is a visual genre related to storytelling, e.g. in online journalism. From the perspective of the web developer a webdocumentary is just a long html document enhanced by the usual suspects: JavaScript and CSS. Basicly a webdocumentary behaves in the same way as the scrolls from ancient cultures. The Egyptian "Book of the Dead" and the Hebrew "Tora" are samples of a the storytelling tradition that precedes the modern books. 
 
