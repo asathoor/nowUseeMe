@@ -31,7 +31,20 @@ function isElementVisible(el) {
     );
 }		
 
+var keepMe = 0;
+
+function playVideo() {
+ a.innerHTML = '<iframe id="ytplayer" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&cc_load_policy=<1></1>" frameborder="0"  allowfullscreen>';   
+}
+
 /* When scrolling do this */			
 window.onscroll = function() {
+    
+    // test
 	console.log( isElementVisible( a ) ); // false or true: Q.E.D.	
+    
+    // as soon as the thing is visible ... fire off some youtube html
+    if (isElementVisible(a) == true ) {
+        playVideo();
+    }
 };
